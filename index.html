@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title id="pageTitle">W E L C O M E  T O  N O T H I N G</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="scanline"></div>
+<div class="eye eye-tl">👁️</div>
+<div class="eye eye-tr">👁️</div>
+<div class="eye eye-bl">👁️</div>
+<div class="eye eye-br">👁️</div>
+<div class="screaming-face">😱</div>
+<div id="motivation" class="motivation-text">You're doing great!</div>
+<div id="deathCounter" class="death-counter">Deaths: 0</div>
+<div id="loadingIndicator" class="loading-indicator"></div>
+
+<div id="annoyingBannerContainer"></div>
+
+<div class="glitch-title" id="mainTitle">W E L C O M E  T O  N O T H I N G</div>
+
+<div class="nav" id="navBar">
+    <a onclick="scrollToGame('mash')">▶ Play & Win Real Prizes</a>
+    <a onclick="scrollToGame('whack')">🔨 Fun Family Game</a>
+    <a onclick="scrollToGame('maze')">🧩 Easy Escape Puzzle</a>
+    <a onclick="scrollToGame('typing')">⌨️ Improve Your Typing</a>
+    <a onclick="scrollToGame('platformer')">🎮 Relaxing Platformer</a>
+    <a onclick="toggleAdmin()">⚙️ Admin Mode</a>
+    <a onclick="playMuteSound()">🔊 Mute Sound</a>
+    <a onclick="exitSite()">🚪 Exit</a>
+</div>
+
+<div class="content">
+
+<div id="mash" class="game-section">
+    <h2>BUTTON MASHER</h2>
+    <p style="text-align:center;color:#ff0;font-family:'Comic Sans MS',cursive;">Mash the button 10 times to win!</p>
+    <div id="mashArea" style="position:relative;min-height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;">
+        <div class="mash-counter" id="mashCounter">0</div>
+        <button class="mash-btn" id="mashBtn">CLICK TO WIN</button>
+    </div>
+</div>
+
+<div id="whack" class="game-section" style="position:relative;">
+    <h2>WHACK-A-MOLE</h2>
+    <p style="text-align:center;color:#ff0;font-family:'Comic Sans MS',cursive;">Whack the moles! Score: <span id="moleScore">0</span></p>
+    <div class="leaderboard" id="moleLeaderboard">Chad_9000: 847 pts<br>ProGamer: 623 pts<br>Xx_Slayer_xX: 512 pts</div>
+    <div class="mole-grid" id="moleGrid"></div>
+</div>
+
+<div id="maze" class="game-section">
+    <h2>MAZE ESCAPE</h2>
+    <p style="text-align:center;color:#ff0;font-family:'Comic Sans MS',cursive;">Solve the maze to escape this website!</p>
+    <canvas id="mazeCanvas" class="maze-canvas" width="400" height="400"></canvas>
+    <div class="maze-status" id="mazeStatus">Use arrow keys or WASD to move</div>
+</div>
+
+<div id="typing" class="game-section" style="position:relative;">
+    <h2>TYPING SPEED TEST</h2>
+    <p style="text-align:center;color:#ff0;font-family:'Comic Sans MS',cursive;">Type this sentence as fast as you can!</p>
+    <div class="typing-wr" id="typingWR">World Record: 9999 WPM 🏆</div>
+    <div class="typing-display" id="typingDisplay"></div>
+    <input class="typing-input" id="typingInput" type="text" placeholder="Start typing..." autocomplete="off">
+    <div class="typing-result" id="typingResult"></div>
+</div>
+
+<div id="platformer" class="game-section">
+    <h2>LEVEL DEVIL</h2>
+    <p style="text-align:center;color:#ff0;font-family:'Comic Sans MS',cursive;">Simple platformer. Reach the flag!</p>
+    <div class="platformer-info">
+        <span id="platDeaths">Deaths: 0</span>
+        <span id="platFlag">Flag: 🚩</span>
+    </div>
+    <canvas id="platCanvas" class="platformer-canvas" width="600" height="400"></canvas>
+    <p style="text-align:center;font-size:12px;color:#666;margin-top:5px;">Arrow keys to move, Space to jump</p>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
